@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alerts | Smart Warehouse</title>
+  <link rel="stylesheet" href="alerts.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><img src="smart-warehouse-logo.svg" alt="Smart Warehouse"></div>
+    <nav class="nav"><div class="nav-label" data-en="OPERATIONS" data-ar="العمليات">OPERATIONS</div>
+      <a class="nav-item" href="../dashboard%20admin/dash.html"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</span></a>
+      <a class="nav-item active" href="#"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span data-en="Alerts" data-ar="التنبيهات">Alerts</span><b class="badge-count">5</b></a>
+      <a class="nav-item" href="../Inventory%201/Inventory.html"><svg viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg><span data-en="Inventory" data-ar="المخزون">Inventory</span></a>
+      <a class="nav-item products-nav" href="#"><svg class="products-icon" width="17" height="17" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.625 2.70703V10.2912M4.33333 2.70703V10.2912M6.5 2.70703V10.2912M9.20833 2.70703V10.2912M11.375 2.70703V10.2912" stroke-linecap="round" stroke="#CDD4E1"/></svg><span data-en="Products" data-ar="المنتجات">Products</span></a>
+      <div class="nav-label planning" data-en="PLANNING" data-ar="التخطيط">PLANNING</div>
+      <a class="nav-item" href="../AI%20forecast1/ai.html"><svg viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-9M15 6h6v6"/></svg><span data-en="AI forecast" data-ar="توقعات الذكاء الاصطناعي">AI forecast</span></a>
+      <a class="nav-item" href="../purchase%20orders/index.html"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 9h6M9 13h6M9 17h3"/></svg><span data-en="Purchase orders" data-ar="أوامر الشراء">Purchase orders</span><b class="badge-count">6</b></a>
+      <a class="nav-item" href="../suppliers/suppliers.html"><svg viewBox="0 0 24 24"><path d="M3 7h12v11H3zM15 11h4l3 4v3h-7z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg><span data-en="Suppliers" data-ar="الموردون">Suppliers</span></a>
+      <a class="nav-item" href="../generate%20reports/generate-report%20%2810%29.html"><svg viewBox="0 0 24 24"><path d="M5 20v-7M12 20V5M19 20V9"/></svg><span data-en="Reports" data-ar="التقارير">Reports</span></a>
+    </nav>
+    <div class="profile" style="--profile-width:100%;--profile-height:96px;--profile-avatar-size:52px;--profile-gap:14px;--profile-padding:16px 14px;--profile-name-width:86px;--profile-background:#1F304A;--profile-avatar-color:#526CB9;--profile-name-color:#fff;--profile-role-color:#9BA9CE;--profile-team-background:#20304A;--profile-team-size:48px;--profile-team-height:48px;--profile-team-shift:4px;--profile-badge-color:#45B189;" aria-label="Warehouse Manager account">
+      <div class="avatar" aria-hidden="true" data-en="WM" data-ar="م ا">WM</div>
+      <div class="profile-copy"><div class="profile-name" data-en="Warehou..." data-ar="مدير المخزن">Warehou...</div><div class="profile-role" data-en="Manager" data-ar="مدير">Manager</div></div>
+      <button class="team" id="usersButton" type="button" aria-label="Team members: 5" aria-haspopup="dialog" aria-expanded="false" aria-controls="usersPopup"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a7 7 0 0 1 14 0v2M17 5a4 4 0 0 0 0 7M19 14a6 6 0 0 1 3 5v2"/></svg><b>5</b></button>
+    </div>
+  </aside>
+  <section class="users-popup" id="usersPopup" role="dialog" aria-label="Active users" aria-hidden="true" hidden>
+    <header class="users-popup-header">
+      <div><strong data-en="Active users" data-ar="المستخدمون النشطون">Active users</strong><span data-en="Signed in to the website" data-ar="المستخدمون المسجلون في الموقع">Signed in to the website</span></div>
+      <span class="online-count"><i></i><b><span class="users-online-number">5</span> <span data-en="online" data-ar="متصل">online</span></b></span>
+    </header>
+    <div class="active-users-list">
+      <div class="active-user"><span class="active-avatar tone-blue">AH<i></i></span><span class="active-identity"><b>Ahmed Hassan</b><small>ahmed@smartwh.com</small></span><span class="role-chip" data-en="Employee" data-ar="موظف">Employee</span></div>
+      <div class="active-user"><span class="active-avatar tone-green">SM<i></i></span><span class="active-identity"><b>Sara Mostafa</b><small>sara@smartwh.com</small></span><span class="role-chip" data-en="Employee" data-ar="موظف">Employee</span></div>
+      <div class="active-user"><span class="active-avatar tone-gold">KA<i></i></span><span class="active-identity"><b>Karim Adel</b><small>karim@supplier.com</small></span><span class="role-chip role-merchant" data-en="Merchant" data-ar="تاجر">Merchant</span></div>
+      <div class="active-user"><span class="active-avatar tone-purple">NY<i></i></span><span class="active-identity"><b>Nour Youssef</b><small>nour@smartwh.com</small></span><span class="role-chip" data-en="Employee" data-ar="موظف">Employee</span></div>
+      <div class="active-user"><span class="active-avatar tone-red">MT<i class="presence-away"></i></span><span class="active-identity"><b>Mona Tarek</b><small data-en="Active 8 min ago" data-ar="نشطة منذ ٨ دقائق">Active 8 min ago</small></span><span class="role-chip role-merchant" data-en="Merchant" data-ar="تاجر">Merchant</span></div>
+    </div>
+    <div class="users-custom-scrollbar" aria-hidden="true"><div class="users-custom-scrollbar-thumb"></div></div>
+    <footer class="users-popup-account"><span class="active-avatar tone-manager">WM</span><span class="active-identity"><b data-en="Warehouse Manager" data-ar="مدير المخزن">Warehouse Manager</b><small data-en="Admin" data-ar="مدير">Admin</small></span><button class="signout-button" type="button" aria-label="Sign out"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 3H5.5A1.5 1.5 0 0 0 4 4.5v11A1.5 1.5 0 0 0 5.5 17H12M10 10h7m0 0-3-3m3 3-3 3"/></svg></button></footer>
+  </section>
+  <main class="main">
+    <header class="topbar"><div class="title"><h1 data-en="Alerts" data-ar="التنبيهات">Alerts</h1><p data-en="Warnings and suggested actions" data-ar="تحذيرات وإجراءات مقترحة">Warnings and suggested actions</p></div>
+      <div class="tools"><label class="search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="search" placeholder="Search products, SKUs..." aria-label="Search alerts"></label><div class="language"><button class="selected" data-lang="en">English</button><button data-lang="ar">العربية</button></div><button class="icon-button" id="bell" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i class="dot"></i></button><button class="primary" id="markAll" data-en="Mark all as read" data-ar="تحديد الكل كمقروء">Mark all as read</button></div>
+    </header>
+    <div class="tabs" role="tablist"><button class="tab active" data-filter="all" data-label-en="All" data-label-ar="الكل">All (5)</button><button class="tab" data-filter="critical" data-label-en="Critical" data-label-ar="حرج">Critical (2)</button><button class="tab" data-filter="warning" data-label-en="Warnings" data-label-ar="تحذيرات">Warnings (3)</button><button class="tab" data-filter="resolved" data-label-en="Resolved" data-label-ar="تم الحل">Resolved (12)</button></div>
+    <section class="stats">
+      <article class="stat red"><div class="stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></svg></div><div><div class="stat-label" data-en="Critical" data-ar="حرج">Critical</div><div class="stat-value">2</div><div class="stat-note" data-en="Needs action now" data-ar="يتطلب إجراءً الآن">Needs action now</div></div></article>
+      <article class="stat amber"><div class="stat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V13M12 17H12.01M21.7304 18.0002L13.7304 4.00022C13.556 3.69243 13.303 3.43641 12.9973 3.25829C12.6917 3.08017 12.3442 2.98633 11.9904 2.98633C11.6366 2.98633 11.2892 3.08017 10.9835 3.25829C10.6778 3.43641 10.4249 3.69243 10.2504 4.00022L2.25042 18.0002C2.0741 18.3056 1.98165 18.6521 1.98243 19.0047C1.98321 19.3573 2.0772 19.7035 2.25486 20.008C2.43253 20.3126 2.68757 20.5648 2.99411 20.7391C3.30066 20.9133 3.64783 21.0034 4.00042 21.0002H20.0004C20.3513 20.9999 20.6959 20.9072 20.9997 20.7315C21.3035 20.5558 21.5556 20.3033 21.7309 19.9993C21.9062 19.6954 21.9985 19.3506 21.9984 18.9997C21.9983 18.6488 21.9059 18.3041 21.7304 18.0002Z" stroke-width="1.5" stroke-linecap="round" stroke="#BD8C25"/></svg></div><div><div class="stat-label" data-en="Warnings" data-ar="تحذيرات">Warnings</div><div class="stat-value">3</div><div class="stat-note" data-en="Review soon" data-ar="يرجى المراجعة قريبًا">Review soon</div></div></article>
+      <article class="stat green"><div class="stat-icon"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg></div><div><div class="stat-label" data-en="Resolved today" data-ar="تم حلها اليوم">Resolved today</div><div class="stat-value">12</div><div class="stat-note" data-en="Handled by the team" data-ar="تمت معالجتها بواسطة الفريق">Handled by the team</div></div></article>
+    </section>
+    <section class="content-grid">
+      <article class="panel"><h2 data-en="Active alerts" data-ar="التنبيهات النشطة">Active alerts</h2><div class="table-wrap"><table><thead><tr><th data-en="TIME" data-ar="الوقت">TIME</th><th data-en="ALERT" data-ar="التنبيه">ALERT</th><th data-en="PRODUCT / CAMERA" data-ar="المنتج / الكاميرا">PRODUCT /<br> CAMERA</th><th data-en="SEVERITY" data-ar="الخطورة">SEVERITY</th><th data-en="SUGGESTED ACTION" data-ar="الإجراء المقترح">SUGGESTED ACTION</th><th></th></tr></thead><tbody id="alertRows"></tbody></table></div></article>
+      <article class="panel type-panel"><h2 data-en="Alerts by type" data-ar="التنبيهات حسب النوع">Alerts by type</h2><div id="types"></div></article>
+    </section>
+    <footer class="copyright">© 2027 Smart Warehouse. All rights reserved.</footer>
+  </main>
+</div><div class="toast" id="toast" role="status"></div>
+<script type="text/javascript" src="alerts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
